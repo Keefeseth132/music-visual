@@ -1,0 +1,12 @@
+body {
+	background-color: black;
+}
+
+.font-color {
+	color: white;
+}
+
+svg {
+	/*border-radius: 25%;*/
+	margin-top: 380px;
+}

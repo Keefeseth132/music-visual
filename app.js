@@ -9,9 +9,14 @@ app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({extended: false}));
 
 app.get('/', indexController.index);
+
+
 app.get('/audio/:fileName', function(req, res){
 	res.sendfile('./audio/' + req.params.fileName)
 })
+
+
+
 
 var server = app.listen(4686, function() {
 	console.log('Express server listening on port ' + server.address().port);
