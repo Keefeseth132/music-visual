@@ -7,6 +7,6 @@ body {
 }
 
 svg {
-	/*border-radius: 25%;*/
+	height: 100%;
 	margin-top: 380px;
 }

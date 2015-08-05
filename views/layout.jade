@@ -1,19 +1,38 @@
 doctype html
 html(lang='en')
 	head
+		link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css", rel="stylesheet")
 		link(href="main.css", rel="stylesheet")
 		meta(charset="utf-8")
 		title visualization 
 
 	body
-		audio(id="audioElement" src="/audio/Odesza-AboveTheMiddle.mp3")
-		div
-			button(onclick="document.getElementById('audioElement').play()") Play the Audio
-			button(onclick="document.getElementById('audioElement').pause()") Pause the Audio
-			button(onclick="document.getElementById('audioElement').volume+=0.1") Increase Volume
-			button(onclick="document.getElementById('audioElement').volume-=0.1") Decrease Volume
+		select(id="songSelection")
+			option() Select a Song
+			option(value="audioElement1") The Drop
+			option(value="audioElement2") How Did I get Here
+			option(value="audioElement3") Monster
+			option(value="audioElement4") Above The Middle
+			option(value="audioElement5") Alive
+
+		//- audio(id="audioElement0")
+		audio(id="audioElement1" src="/audio/BROSAFARI-THEDROP.mp3")
+		audio(id="audioElement2" src="/audio/HowDidIGetHere.wav")
+		audio(id="audioElement3" src="/audio/Meg&Dia-Monster(DotEXE Remix).mp3")
+		audio(id="audioElement4" src="/audio/Odesza-AboveTheMiddle.mp3")
+		audio(id="audioElement5" src="/audio/OVERWERK-Alive.mp3")
+		
+		//- div.dropdown
+		//- 	button(id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") someText
+		//- 		span(class="caret")
+		//- 	ul(class="dropdown-menu" aria-labelledby="dLabel")
+		//- button#play(onclick="document.getElementById('audioElement1').play()") Play the Audio
+		button#stop() Stop the Audio
+
+
 		block content
 
 		script(src="https://code.jquery.com/jquery-2.1.3.min.js")
+		script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js")
 		script(src="http://d3js.org/d3.v3.min.js" charset="utf-8")
 		script(src="main.js")
