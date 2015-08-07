@@ -48,8 +48,8 @@ $(document).ready(function () {
   //var frequencyData = new Uint8Array(analyser.frequencyBinCount);
   var frequencyData = new Uint8Array(750); // Uint8Array is array of 8bit integers & param is number of bars. Has a threshold.
 
-  var svgHeight = '300'; // there is a bug, quotes denote pixle count
-  var svgWidth = '1600';
+  var svgHeight = '350'; // there is a bug, quotes denote pixle count
+  var svgWidth = '1930';
   var barPadding = '1';
 
   function createSvg(parent, height, width) {
@@ -90,7 +90,7 @@ $(document).ready(function () {
            return d;
         })
         .attr('fill', function(d) {
-           return 'rgb(115, 60, ' + d + ')';
+           return 'rgb(' + d + ', 60 , 115)';
         });
   }
 
